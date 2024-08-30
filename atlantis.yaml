@@ -1,0 +1,9 @@
+version: 3
+parallel_plan: true
+parallel_apply: true
+
+projects:
+  - dir: terraform/env/test
+    autoplan:
+      when_modified: ["*.tf*", ".terraform.lock.hcl"]
+
